@@ -19,49 +19,6 @@ public class MethodsCode {
                if result equal to 0 then return the -1
 
         */
-    public int getTotal(String myNumbers){
-
-        char[] myChar = myNumbers.toCharArray();
-
-        int total = 0 ;
-        for(int  i= 0 ; i<myChar.length ; i++){
-
-
-            if(myChar[i]%2==0){
-
-                String str = String.valueOf(myChar[i]);
-
-                int myeven = Integer.parseInt(str);
-
-                myeven = myeven*2;
-
-                total = total + myeven;
-
-            }else if(myChar[i]%2==1){
-
-                String str = String.valueOf(myChar[i]);
-
-                int myodd = Integer.parseInt(str);
-
-                myodd = myodd*-1;
-
-                total = total + myodd;
-
-            }
-
-
-        }
-
-
-        if(total == 0 ){
-
-            total = -1 ;
-        }
-
-        System.out.println(total);
-
-        return total;
-    }
 
 /*
         Create a method name is:  BankStatement_Calculator <<<<-----  copy the name from here
@@ -80,33 +37,7 @@ public class MethodsCode {
                                 if result is equal to 0 then return -1
 
  */
-public double BankStatement_Calculator(ArrayList<String> MyStatement){
 
-    double total = 0 ;
-
-    for(int i = 0 ; i<MyStatement.size(); i++){
-
-        String myNum =MyStatement.get(i);
-
-       myNum = myNum.replace("$" , "");
-       myNum= myNum.replace("," , "");
-
-        double num1 = Double.parseDouble(myNum);
-
-        total = total +num1;
-
-
-    }
-
-    if (total == 0 ){
-
-       total=-1;
-
-    }
-
-    return total;
-
-}
 
 /*
     Create a method which is generating the random number name is : RandomGenerator  <<--- take the name here
@@ -119,14 +50,6 @@ public double BankStatement_Calculator(ArrayList<String> MyStatement){
     if max is equal to 1 then return the 1
  */
 
-    public int RandomGenerator(int i1){
-
-        Random rnd = new Random();
-
-        int rndNum = rnd.nextInt(i1-1)+1;
-
-        return rndNum;
-    }
 
     /*
 
@@ -156,30 +79,6 @@ public double BankStatement_Calculator(ArrayList<String> MyStatement){
 
      */
 
-public String getPopulation(ArrayList<String> CountryName ,ArrayList<String> Population,String county  ){
-
-    String result = "";
-
-    for(int i =0 ; i< CountryName.size() ; i++){
-
-        String myCoun = CountryName.get(i);
-
-        if(myCoun.equals(county)){
-
-            result = Population.get(i);
-
-        }
-
-    }
-
-
-    if(result.equals("")){
-
-        result ="-1";
-    }
-
-return result;
-}
 
 /*
 
@@ -208,37 +107,6 @@ note:
         this method will not work if you don't finish the randomNumber method
 
  */
-
-public String BJ21(){
-
-    int total = 0;
-
-    String Result = "";
-    for(int i=0 ; i< 3 ; i++){
-
-        int randomNum = RandomGenerator(11);
-
-        total = total +randomNum;
-
-    }
-
-    if(total>21){
-
-        Result = "You are a loser";
-
-    }else if(total>18){
-
-        Result = "You have a chance";
-    }else if(total>=10){
-
-        Result = "You are chicken";
-    }else if(total<10){
-
-        Result = "You are deep loser";
-    }
-
-    return Result;
-}
 
 
 }
