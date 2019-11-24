@@ -64,7 +64,7 @@ public class MethodsCode {
 
         return String
 
-        for exxample:
+        for example:
                 arrayList one =>   USA , Mexico , Canada , Brazil
                 arraylist second => 350000000  , 100000000 , 50000000 , 120000000
                 and the string is USA

@@ -258,7 +258,7 @@ public class MethodsTest {
     public void BJ21_1() {
 
         String s1 = c1.BJ21();
-
+  
         if(s1.contains("You are a loser")){
             Assert.assertTrue(true);
 
